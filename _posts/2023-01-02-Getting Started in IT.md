@@ -10,3 +10,4 @@ permalink: /gettingstarted/01
 
 This is the first article in a series aimed to offer guidance, knowledge, and discussion on topics important to starting your IT career. The goal of this series is to provide a single place to read and learn about topics that are necessary when getting started in an enterprise IT envrionment.
 
+Making a change
