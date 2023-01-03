@@ -6,13 +6,21 @@ categories: GettingStarted_Intro
 permalink: /:categories/:title
 ---
 
-<div style="float: left"><img src="/assets/usb-g1939b3231_1920.jpg" width="400" hspace= "20px" vspace="10px" /></div>
+<div style="float: right"><img src="/assets/usb-g1939b3231_1920.jpg" width="400" hspace= "20px" vspace="10px" /></div>
 
 
 
 This is the first article in a series aimed to offer guidance, knowledge, and discussion on topics important to starting your IT career. The goal of this series is to provide a single place to read and learn about topics that are necessary when getting started in an enterprise IT envrionment.
 
 
+\
+\
+\
+\
+\
+\
+\
+Below you will find a table that will be updated with all the articles in this series broke out into their respective categories. New articles will be added that cover more in depth topics for each category as time goes on.
 
 
 
