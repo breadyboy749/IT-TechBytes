@@ -53,3 +53,18 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+header_pages:
+  - index.markdown
+  - blog.md
+  - about.markdown
+
+
+defaults:
+  -
+    scope:
+      path: "_posts/GettingStarted"
+    values:
+      layout: "post"
+      permalink: /:categories/:title
+      series: "Getting Started Series"

@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<div class="home">
+<div class="blog">
   {%- if page.title -%}
     <h1 class="page-heading">{{ page.title }}</h1>
   {%- endif -%}
@@ -24,8 +24,9 @@ layout: default
     <ul class="post-list">
       {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
       {%- for post in posts -%}
-      <li>
+      <li class="ohyeah">
         <span class="post-meta">{{ post.date | date: date_format }}</span>
+        <span class="post-type">{{post.series}}</span>
         <h3>
           <a class="post-link" href="{{ post.url | relative_url }}">
             {{ post.title | escape }}
@@ -37,7 +38,6 @@ layout: default
       </li>
       {%- endfor -%}
     </ul>
-
     {% if site.paginate %}
       <div class="pager">
         <ul class="pagination">
@@ -58,4 +58,30 @@ layout: default
 
   {%- endif -%}
 
+  <style>
+    li.ohyeah {
+      max-width: calc(#{$content-width} - (#{$spacing-unit}));
+      border: 1px solid gray;
+      padding: 12px;
+      margin: 15px;
+    }
+    </style>
+
+<style>
+  .post-type {
+    background-color: 	#484848;
+    padding: 2px;
+    margin-left: 6px;
+    font-size: 13px;
+    color: white;
+  }
+
+
+</style>
+
+
 </div>
+
+
+
+
