@@ -1,0 +1,99 @@
+---
+layout: default
+---
+
+<style>
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat( 3, 1fr);
+  gap: 10px;
+  grid-auto-rows: 100px;
+  
+  padding: 10px;
+}
+
+.grid-item {
+  display: flex;
+  border: 3px solid gray;
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+  text-size-adjust: auto;
+}
+</style>
+
+<style>
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat( 3, 1fr);
+      gap: 10px;
+      grid-auto-rows: 100px;
+      
+      padding: 10px;
+    }
+    
+    .grid-item {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+        word-wrap: break-word;
+        background-color: solid white;
+        background-clip: border-box;
+
+        border: 3px solid gray;
+        padding: 20px;
+        font-size: 30px;
+        text-align: center;
+        align-items: center;
+        flex: 1 1 auto;
+        padding: auto;
+        color: solid white;
+
+    }
+    
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    </style>
+    
+    
+    #### Recent Articles
+    
+    <div class="grid-container">
+    
+    
+        {% assign latest_post = site.posts[0] %}
+        <div class="grid-item"> {{latest_post.title}} </div>
+        {% assign latest_post = site.posts[1] %}
+        <div class="grid-item"> {{latest_post.title}} </div>
+        {% assign latest_post = site.posts[2] %}
+        <div class="grid-item"> {{latest_post.title}} <img src = "/assets/WhatisNAT.drawio.png"></div>
+    </div>
+
+{% assign latestPost_year = site.posts.first.date | date: "%Y"  %}
+{% assign latestPost_day = site.posts.first.date | date: "%j" | plus: 0  %}
+{% assign latestPost_day_minus_week = site.posts.first.date | date: "%j" | minus: 1 %}
+<div class="grid-container">
+
+{%- for post in site.posts -%}
+
+    {% assign postYear = post.date | date: "%Y" %}
+    {% assign postDay = post.date | date: "%j" | plus: 0 %}
+    
+    {%- if latestPost_year == postYear and postDay > latestPost_day_minus_week and postDay <= latestPost_day -%}
+        
+        <div class="grid-item">{{ post.title }} </div>
+    {%- endif -%}
+
+    
+
+{% endfor %}
+
+
+</div>
+  
+
+  
+  

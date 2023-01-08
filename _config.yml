@@ -68,3 +68,7 @@ defaults:
       layout: "post"
       permalink: /:categories/:title
       series: "Getting Started Series"
+
+
+sass:
+  sass_dir: _sass

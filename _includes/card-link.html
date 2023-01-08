@@ -1,0 +1,21 @@
+<a href="{{ include.url }}" class="post-card">
+    <div class="card">
+        {% if include.banner_img %}
+        <img src="{{ include.banner_img | prepend: site.content-thumbs-images-path | prepend: site.baseurl | prepend: site.url }}"
+            width="100%" height="310" alt="Card image for {{ include.title }}" />
+        {% endif %}
+        {% if include.excerpt %}
+        <div class="card-body">
+            <h5 class="card-title">{{ include.title }}</h5>
+            <small class="card-text text-muted">{{ include.excerpt }}</small>
+        </div>
+        <div class="card-footer text-end">
+            <small class="text-muted">{{ include.date | date: "%b %Y" }}</small>
+        </div>
+        {% else %}
+        <div class="card-body">
+            <span>{{ include.title }}</span>
+        </div>
+        {% endif %}
+    </div>
+</a>
