@@ -3,6 +3,7 @@ layout: post
 title:  "What is a LAN?"
 categories: GettingStarted_NetworkingBasics
 permalink: /:categories/:title
+excerpt: "test"
 ---
 
 <div style=img><img src="/assets/network.png"></div>
