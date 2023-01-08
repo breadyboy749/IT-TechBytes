@@ -24,14 +24,14 @@ Below you will find a table that will be updated with all the articles in this s
 
 
 
-|Intro | Short Description |
+|**Intro** | **Short Description** |
 |---|---|
 {% for post in site.categories.GettingStarted_Intro -%}
 {% if post.title -%}
 | [{{post.title}}]({{ post.url }}) |
 {% endif %}
 {%- endfor -%}
-|Networking Basics | Short Description |
+|**Networking Basics** | **Short Description** |
 |---|---|
 {% for post in site.categories.GettingStarted_NetworkingBasics -%}
 {% if post.title -%}
