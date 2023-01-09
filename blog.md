@@ -8,12 +8,14 @@ menu: Blog
 # Recent Posts
 
 <style>
+@media screen and (min-width: 40em) {
 .body {
   display: flex;
   flex-direction: row;
 
 }
 
+}
 
 .card {
   /* Add shadows to create the "card" effect */
@@ -26,7 +28,7 @@ menu: Blog
   flex-direction: column ;
   text-align: left;
   align-items: left;
-  width: 33%;
+  flex: 31%;
   margin: 8px;
 
 

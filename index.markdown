@@ -16,9 +16,12 @@ Check out some of our recent articles, or go on over to the [Blog](http://it-tec
 
 # Recent Articles
 <style>
+@media screen and (min-width: 40em) {
 .body {
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
+  
+}
 
 }
 
@@ -34,11 +37,13 @@ Check out some of our recent articles, or go on over to the [Blog](http://it-tec
   flex-direction: column ;
   text-align: left;
   align-items: left;
-  width: 33%;
+
+  flex: 31%;
   margin: 8px;
 
-
 }
+
+
 
 /* On mouse-over, add a deeper shadow */
 .card:hover {
