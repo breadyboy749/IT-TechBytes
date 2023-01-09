@@ -1,10 +1,9 @@
 ---
 layout: post
-title:  "What is PKI"
-date:   2023-01-01 22:10:56 -0600
+title:  "What is PKI?"
 categories: GettingStarted_PKI
-permalink: /:categories/:
-excerpt: "PKI"
+permalink: /:categories/:title
+
 ---
 
 Test
