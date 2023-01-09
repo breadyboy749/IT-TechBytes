@@ -2,9 +2,10 @@
 layout: default
 ---
 
+
 <div class="blog">
   {%- if page.title -%}
-    <h1 class="page-heading">{{ page.title }}</h1>
+    <!--<h1 class="page-heading">{{ page.title }}</h1>-->
   {%- endif -%}
 
   {{ content }}
@@ -32,6 +33,7 @@ layout: default
             {{ post.title | escape }}
           </a>
         </h3>
+        <span class="post-excerpt">{{post.excerpt}}</span>
         {%- if site.show_excerpts -%}
           {{ post.excerpt }}
         {%- endif -%}
@@ -70,7 +72,7 @@ layout: default
 <style>
   .post-type {
     background-color: 	#484848;
-    padding: 2px;
+    padding: 0px;
     margin-left: 6px;
     font-size: 13px;
     color: white;

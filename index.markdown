@@ -14,52 +14,78 @@ title: Welcome to IT-TechBytes
 Check out some of our recent articles, or go on over to the [Blog](http://it-techbytes.com/blog) page to see our Getting Started Series and a list of our other articles.
 
 
+# Recent Articles
 <style>
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat( 3, 1fr);
-  gap: 10px;
-  grid-auto-rows: 235px;
-  grid-template-areas: "left right";
+.body {
+  display: flex;
+  flex-direction: row;
+
+}
+
+
+.card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(245, 245, 245, 0.2);
+  background-color: rgb(64, 64, 64);
+  border-radius: 5px;
+  transition: 0.3s;
+  display: flex;
+  flex-flow: row wrap;
+  flex-direction: column ;
+  text-align: left;
+  align-items: left;
+  width: 33%;
+  margin: 8px;
+
+
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* Add some padding inside the card container */
+.container {
+  padding: 10px 10px;
+
+}
+
+.blah {
   padding: 10px;
+  object-fit: cover;
+  
+
 }
 
-.grid-item {
-  border: 3px solid gray;
-  background: light gray;
-  border-radius: 16px;
-  padding: 20px;
-  font-size: 30px;
-  text-align: center;
-  align-items: center;
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-}
-
-img {
-  max-width: auto;
-  height: auto;
-}
 </style>
 
 
-#### Recent Articles
-
-<div class="grid-container">
 
 
-    {% assign latest_post = site.posts[0] %}
-    <div class="grid-item"> {{latest_post.title}} </div>
-    {% assign latest_post = site.posts[3] %}
-    <div class="grid-item"> {{latest_post.title}} </div>
-    {% assign latest_post = site.posts[4] %}
-    <div class="grid-item"> {{latest_post.title}} <img src = "/assets/WhatisNAT.drawio.png"></div>
-
-
-
-
-
-
-
-
+<div class="body">
+  {% assign latest_post = site.posts[0] %}
+  <a href="{{site.baseurl}}{{latest_post.url}}" class="card">
+    <div class="blah"><img src= "{{latest_post.picture}}" style="width:100%"></div>
+    <div class="container">
+      <h3><b>{{latest_post.title}}</b></h3>
+      <p>{{latest_post.excerpt}}</p>
+    </div>
+  </a>
+  {% assign latest_post = site.posts[1] %}
+  <a href="{{site.baseurl}}{{latest_post.url}}" class="card">
+    <div class="blah"><img src="{{latest_post.picture}}" style="width:100%"></div>
+    <div class="container">
+      <h3><b>{{latest_post.title}}</b></h3>
+      <p>{{latest_post.excerpt}}</p>
+    </div>
+  </a>
+  {% assign latest_post = site.posts[2] %}
+  <a href="{{site.baseurl}}{{latest_post.url}}" class="card">
+    <div class="blah"><img src="{{latest_post.picture}}" style="width:100%"></div>
+    <div class="container">
+      <h3><b>{{latest_post.title}}</b></h3>
+      <p>{{latest_post.excerpt}}</p>
+    </div>
+  </a>
 </div>

@@ -3,97 +3,76 @@ layout: default
 ---
 
 <style>
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat( 3, 1fr);
-  gap: 10px;
-  grid-auto-rows: 100px;
-  
-  padding: 10px;
+.body {
+  display: flex;
+  flex-direction: row;
+
 }
 
-.grid-item {
+
+.card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(245, 245, 245, 0.2);
+  background-color: rgb(68, 68, 68);
+  border-radius: 5px;
+  transition: 0.3s;
   display: flex;
-  border: 3px solid gray;
-  padding: 20px;
-  font-size: 30px;
-  text-align: center;
-  text-size-adjust: auto;
+  flex-flow: row wrap;
+  flex-direction: column ;
+  text-align: left;
+  align-items: left;
+  width: 33%;
+  margin: 8px;
+
+
 }
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* Add some padding inside the card container */
+.container {
+  padding: 10px 10px;
+
+}
+
+.blah {
+  padding: 10px;
+  object-fit: cover;
+  
+
+}
+
 </style>
 
-<style>
-    .grid-container {
-      display: grid;
-      grid-template-columns: repeat( 3, 1fr);
-      gap: 10px;
-      grid-auto-rows: 100px;
-      
-      padding: 10px;
-    }
-    
-    .grid-item {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        min-width: 0;
-        word-wrap: break-word;
-        background-color: solid white;
-        background-clip: border-box;
 
-        border: 3px solid gray;
-        padding: 20px;
-        font-size: 30px;
-        text-align: center;
-        align-items: center;
-        flex: 1 1 auto;
-        padding: auto;
-        color: solid white;
 
-    }
-    
-    img {
-      max-width: 100%;
-      height: auto;
-    }
-    </style>
-    
-    
-    #### Recent Articles
-    
-    <div class="grid-container">
-    
-    
-        {% assign latest_post = site.posts[0] %}
-        <div class="grid-item"> {{latest_post.title}} </div>
-        {% assign latest_post = site.posts[1] %}
-        <div class="grid-item"> {{latest_post.title}} </div>
-        {% assign latest_post = site.posts[2] %}
-        <div class="grid-item"> {{latest_post.title}} <img src = "/assets/WhatisNAT.drawio.png"></div>
+
+<div class="body">
+  {% assign latest_post = site.posts[0] %}
+  <a href="{{site.baseurl}}{{latest_post.url}}" class="card">
+    <div class="blah"><img src= "{{latest_post.picture}}" style="width:100%"></div>
+    <div class="container">
+      <h3><b>{{latest_post.title}}</b></h3>
+      <p>{{latest_post.excerpt}}</p>
     </div>
-
-{% assign latestPost_year = site.posts.first.date | date: "%Y"  %}
-{% assign latestPost_day = site.posts.first.date | date: "%j" | plus: 0  %}
-{% assign latestPost_day_minus_week = site.posts.first.date | date: "%j" | minus: 1 %}
-<div class="grid-container">
-
-{%- for post in site.posts -%}
-
-    {% assign postYear = post.date | date: "%Y" %}
-    {% assign postDay = post.date | date: "%j" | plus: 0 %}
-    
-    {%- if latestPost_year == postYear and postDay > latestPost_day_minus_week and postDay <= latestPost_day -%}
-        
-        <div class="grid-item">{{ post.title }} </div>
-    {%- endif -%}
-
-    
-
-{% endfor %}
-
-
+  </a>
+  {% assign latest_post = site.posts[1] %}
+  <a href="{{site.baseurl}}{{latest_post.url}}" class="card">
+    <div class="blah"><img src="{{latest_post.picture}}" style="width:100%"></div>
+    <div class="container">
+      <h3><b>{{latest_post.title}}</b></h3>
+      <p>{{latest_post.excerpt}}</p>
+    </div>
+  </a>
+  {% assign latest_post = site.posts[2] %}
+  <a href="{{site.baseurl}}{{latest_post.url}}" class="card">
+    <div class="blah"><img src="{{latest_post.picture}}" style="width:100%"></div>
+    <div class="container">
+      <h3><b>{{latest_post.title}}</b></h3>
+      <p>{{latest_post.excerpt}}</p>
+    </div>
+  </a>
 </div>
-  
-
-  
-  

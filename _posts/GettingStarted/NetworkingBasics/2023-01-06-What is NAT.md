@@ -3,7 +3,7 @@ layout: post
 title:  "What is NAT"
 categories: GettingStarted_NetworkingBasics
 permalink: /:categories/:title
-img: "/assets/WhatisNAT.drawio.png"
+picture: "/assets/WhatisNAT.drawio.png"
 excerpt: "More than likely your devices do have the same IP addresses as devices connected to your neighbors home network, and really everybody's home networks. How does this work then?"
 ---
 At the beginning of the internet all computer networking was based around IPv4 addresses where there are 4 billion different addresses that can exist which was more than enough at the time. As more and more devices joined the internet, it became clear that a solution was needed to address (no pun intended) this issue. To offer a frame of reference according to statista.com in 2020 there were 9.7 billion devices connected to the internet and predictions estimate by 2030 that number is going to triple to more than 29 billion.

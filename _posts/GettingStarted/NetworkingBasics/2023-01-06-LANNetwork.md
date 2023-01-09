@@ -3,6 +3,8 @@ layout: post
 title:  "What is a LAN?"
 categories: GettingStarted_NetworkingBasics
 permalink: /:categories/:title
+picture: "/assets/network.png"
+excerpt: "How does basic computer networking work? How do all of the devices in your home talk to the internet? Read more to find out!"
 ---
 
 <div style=img><img src="/assets/network.png"></div>

@@ -6,7 +6,8 @@ categories: GettingStarted_Intro
 permalink: /:categories/:title
 ---
 
-<div style="float: right"><img src="/assets/usb-g1939b3231_1920.jpg" width="400" hspace= "20px" vspace="10px" /></div>
+<!--<div style="float: right"><img src="/assets/usb-g1939b3231_1920.jpg" width="400" hspace= "20px" vspace="10px" /></div>-->
+<div><img src="/assets/usb-g1939b3231_1920.jpg" style="float: right" width="400"></div>
 
 
 
