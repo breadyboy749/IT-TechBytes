@@ -5,6 +5,7 @@ date:   2023-01-01 22:10:56 -0600
 categories: GettingStarted_Intro
 permalink: /:categories/:title
 excerpt: "Introduction to the series"
+pinned: true
 ---
 
 <!--<div style="float: right"><img src="/assets/usb-g1939b3231_1920.jpg" width="400" hspace= "20px" vspace="10px" /></div>-->

@@ -5,7 +5,12 @@ date:   2023-01-01 22:10:56 -0600
 categories: GettingStarted_DNS
 permalink: /:categories/:title
 excerpt: "DNS is the phone book of the internet, it helps us remember how to get to computer resources and is usually the cause of a lot of networking issues. Be warned."
+picture: "/assets/alwaysdns.png"
 ---
+
+<div style=img><img src="/assets/alwaysdns.png"></div>
+
+<br>
 
 DNS helps make our lives easier when interacting with the internet. When you meet someone and get their phone number, what is the first thing that you do? You go to your phone and add a contact for them because it is a lot easier to remember John - From Work then it is to try and remember what their phone number is. This is essentially what DNS deos for the internet! Lets learn what it is, how it works, and how troublesome it can be.
 
