@@ -14,7 +14,6 @@ picture: "/assets/alwaysdns.png"
 
 DNS helps make our lives easier when interacting with the internet. When you meet someone and get their phone number, what is the first thing that you do? You go to your phone and add a contact for them because it is a lot easier to remember John - From Work then it is to try and remember what their phone number is. This is essentially what DNS deos for the internet! Lets learn what it is, how it works, and how troublesome it can be.
 
-# What is DNS?
 DNS is an acronymn that stands for `domain name system`. DNS is the phonebook of the internet and allows us to associate a `domain name` to an `IP address`. This is super important when it comes to browsing the internet as there are tons of IP addresses for each different resource that we access everyday. Remembering all of those IP addresses would be impossible, espically given that they can change! DNS lets us type in Google.com in the URL bar and it will figure out the rest. Lets explore how DNS works.
 
 ## Types of DNS Records
@@ -35,6 +34,11 @@ If you are curious about more information on any of these domain record types [C
 
 <br>
 There are a lot more topics to cover within DNS that we will get to in other articles. This article is aimed to give a good basic understanding of some of the core functions of DNS, in other articles we will focus more on some of the inner workings of DNS along with some real world use cases and troubleshooting you can expect to see in an enterprise environment.
+
+<br>
+
+## DNS in your home
+By default your router is configured to assign specific DNS servers to all devices that connect to your network. This is done when a device connects and receives a DHCP lease from your router containing all of the required information to connect to the network and out to the internet. Since this is something setup on your router most will let you go in and change what DNS servers are being used to do all of your lookups and it is a good idea to change these to something more widely used like Google or Cloudflares DNS servers. There are multiple reasons you may want to do this and we will cover it in another article.
 
 
 ## Lets do some exploring
