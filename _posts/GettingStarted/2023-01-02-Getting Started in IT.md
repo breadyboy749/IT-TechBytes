@@ -4,7 +4,9 @@ title:  "Getting Started in IT"
 date:   2023-01-01 22:10:56 -0600
 categories: GettingStarted_Intro
 permalink: /:categories/:title
-excerpt: "Introduction to the series"
+excerpt: "Introduction to the series. A collection of articles aimed at helping you gain important IT knowledge to land your first job or just learn some stuff about IT and other technologies!
+picture: "/assets/usb-g1939b3231_1920.jpg"
+
 ---
 
 <!--<div style="float: right"><img src="/assets/usb-g1939b3231_1920.jpg" width="400" hspace= "20px" vspace="10px" /></div>-->
