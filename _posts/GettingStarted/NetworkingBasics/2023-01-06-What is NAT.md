@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "What is NAT"
+title:  "What is NAT?"
 categories: GettingStarted_NetworkingBasics
 permalink: /:categories/:title
 picture: "/assets/WhatisNAT.drawio.png"
