@@ -5,6 +5,27 @@ permalink: /blog/
 menu: Blog
 ---
 
+# Pinned Posts
+
+
+<div class="body">
+{% for post in site.posts %}
+    {% if post.pinned == true %}
+      <a href="{{site.baseurl}}{{post.url}}" class="card">
+        <div class="blah"><img src= "{{post.picture}}" style="width:100%"></div>
+        <div class="container">
+          <h3><b>{{post.title}}</b></h3>
+          <p>{{post.excerpt}}</p>
+        </div>
+      </a>
+          {% endif %}
+          {% endfor %}
+</div>
+
+
+<br>
+<br>
+
 # Recent Posts
 
 <style>

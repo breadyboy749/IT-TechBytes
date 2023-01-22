@@ -5,6 +5,7 @@ categories: GettingStarted_NetworkingBasics
 permalink: /:categories/:title
 excerpt: "How do devices in your home talk to the internet? How does a local network work to connect all your devices and let them talk to the internet? Read about a LAN to learn one of the fundamental concepts of networking."
 picture: "/assets/network.png"
+pinned: true
 ---
 
 <div style=img><img src="/assets/network.png"></div>
