@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "What is a firewall?"
-date:   2023-01-01 22:10:56 -0600
+date:   2023-01-22 22:10:56 -0600
 categories: GettingStarted_Firewalls
 permalink: /:categories/:title
 excerpt: "Firewalls, while not as destructive as they sound, are an important part of keeping a network secure and ensuring only allowed traffic can get through."
