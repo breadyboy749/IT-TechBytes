@@ -26,7 +26,7 @@ menu: Blog
 <br>
 <br>
 
-# Recent Posts
+# More Recent Posts
 
 <style>
 @media screen and (min-width: 40em) {
@@ -78,7 +78,7 @@ menu: Blog
 
 
 <div class="body">
-  {% assign latest_post = site.posts[0] %}
+  {% assign latest_post = site.posts[3] %}
   <a href="{{site.baseurl}}{{latest_post.url}}" class="card">
     <div class="blah"><img src= "{{latest_post.picture}}" style="width:100%"></div>
     <div class="container">
@@ -86,7 +86,7 @@ menu: Blog
       <p>{{latest_post.excerpt}}</p>
     </div>
   </a>
-  {% assign latest_post = site.posts[1] %}
+  {% assign latest_post = site.posts[4] %}
   <a href="{{site.baseurl}}{{latest_post.url}}" class="card">
     <div class="blah"><img src="{{latest_post.picture}}" style="width:100%"></div>
     <div class="container">
@@ -94,7 +94,7 @@ menu: Blog
       <p>{{latest_post.excerpt}}</p>
     </div>
   </a>
-  {% assign latest_post = site.posts[2] %}
+  {% assign latest_post = site.posts[5] %}
   <a href="{{site.baseurl}}{{latest_post.url}}" class="card">
     <div class="blah"><img src="{{latest_post.picture}}" style="width:100%"></div>
     <div class="container">
