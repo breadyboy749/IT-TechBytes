@@ -19,7 +19,7 @@ I think that having a good understanding of networking is essential to landing y
 <br/>
 
 # What is a LAN Network?
-LAN is an acroynm that stands for local area network and refers to a computer network composed of IP addresses that fall into what is called the `private IP address space`. You can check out our article on [What is an IP Address] to learn more about this topic. One of the easiest ways to think about a LAN network is to think of your internet network that you have at home. You probably have a router that was given to you by your Internet Service Provider that you connect all of your devices to at home. That is a LAN network!
+LAN is an acronym that stands for local area network and refers to a computer network composed of IP addresses that fall into what is called the `private IP address space`. You can check out our article on [What is an IP Address] to learn more about this topic. One of the easiest ways to think about a LAN network is to think of your internet network that you have at home. You probably have a router that was given to you by your Internet Service Provider that you connect all of your devices to at home. That is a LAN network!
 \
 <br/>
 
@@ -30,19 +30,19 @@ Everything that is connected to the router and is part of our LAN can talk to on
 
 
 <br/>
-Lets looks at this example below. In this digram we have a basic rendition of a home network. In the middle we have our router (It's wireless network is named TechBytes-Home) and we have a couple of devices connected via WiFi and one single wired device. You will also see there is a single connection coming from the router marked as ISP Connection going out to the Internet. Everything that is connected to the router (excluding the ISP Connection) either directly or wirelessly is part of our LAN. When a device wants to reach a resource on the internet everything is 'routed' through the router, hence the name. The routers job is to forward that traffic out to the internet and when it receives data back it will route it back to your device. If you want to learn more about how a router takes your devices request and forwards it to the internet you should check out our article on [NAT](http://it-techbytes.com/gettingstarted_networkingbasics/What-is-NAT), one of the most important concepts that makes the internet work.
+Lets looks at this example below. In this diagram we have a basic rendition of a home network. In the middle we have our router (It's wireless network is named TechBytes-Home) and we have a couple of devices connected via WiFi and one single wired device. You will also see there is a single connection coming from the router marked as ISP Connection going out to the Internet. Everything that is connected to the router (excluding the ISP Connection) either directly or wirelessly is part of our LAN. When a device wants to reach a resource on the internet everything is 'routed' through the router, hence the name. The routers job is to forward that traffic out to the internet and when it receives data back it will route it back to your device. If you want to learn more about how a router takes your devices request and forwards it to the internet you should check out our article on [NAT](http://it-techbytes.com/gettingstarted_networkingbasics/What-is-NAT), one of the most important concepts that makes the internet work.
 
 <div style=img><img src="/assets/What is a LAN.drawio.png"></div>
 
 <br/>
-You will notice each device in the diagram is assigned an IP address. This is the role of the router. Each device that connects to your network must have its own unique IP address and when a new device connects to the router it asks for an IP address. This is using a proctocol named `DHCP` that we cover in another of our [Getting Started Articles](http://it-techbytes.com/gettingstarted_intro/Getting-Started-in-IT). Notice all the devices have a simiar IP address format with only the ending number being different. Lets talk briefly about the most common LAN IP address configuration.
+You will notice each device in the diagram is assigned an IP address. This is the role of the router. Each device that connects to your network must have its own unique IP address and when a new device connects to the router it asks for an IP address. This is using a protocol named `DHCP` that we cover in another of our [Getting Started Articles](http://it-techbytes.com/gettingstarted_intro/Getting-Started-in-IT). Notice all the devices have a similar IP address format with only the ending number being different. Lets talk briefly about the most common LAN IP address configuration.
 
-### Baisc LAN Networking
-If you thnk about your current home network you probably have a lot more devices connected that what is shown in the diagram so your router has to assign all of them an IP address and keep track of all of those addresses it assigned. Routers are specifically designed to do this and keep what is called a routing table of all the devices connected to your network. 
+### Basic LAN Networking
+If you think about your current home network you probably have a lot more devices connected that what is shown in the diagram so your router has to assign all of them an IP address and keep track of all of those addresses it assigned. Routers are specifically designed to do this and keep what is called a routing table of all the devices connected to your network. 
 
 You may be wondering, how does the router decide what IP addresses to use when it needs to assign a new one to a device? This is based on configuration that you can set on the router and for most they have a default configuration that is used that allows users to plug-in-play when they receive it from their ISP. For 95% of home routers they are all using the same network configuration, this configuration being standardized can be very helpful when needing to troubleshoot issues and ensures the most basic home network setup for users that don't want to go in and have to mess with things.
 
-For your LAN there are a couple of things that determine how your network is setup. These are your `default gateway`, and `subnet`. LAN's also must use only specific IP address ranges that don't interfere with IP addresses used for networks differen than a LAN. The IP addresses used for a LAN are part of what is called RFC1918, one of many standards set for networking. You can read more about RFC1918 in our [What is an IP Address](http://it-techbytes.com/gettingstarted_intro/What-is-an-ip-address) article. For now lets use the example of the most common LAN IP address range, 192.168.1.0-192.168.1.255.
+For your LAN there are a couple of things that determine how your network is setup. These are your `default gateway`, and `subnet`. LAN's also must use only specific IP address ranges that don't interfere with IP addresses used for networks different than a LAN. The IP addresses used for a LAN are part of what is called RFC1918, one of many standards set for networking. You can read more about RFC1918 in our [What is an IP Address](http://it-techbytes.com/gettingstarted_intro/What-is-an-ip-address) article. For now lets use the example of the most common LAN IP address range, 192.168.1.0-192.168.1.255.
 
 Lets break down how this IP range works. In our diagram above you can see the router is assigned the IP address 192.168.1.1. This is the first address in our range and for any network, this address is reserved for what is called the `default gateway`. So in this case our router is our networks default gateway, which means that is the device that will route all of our requests to the internet. Every address after that is available for devices that connect to the router. That means there are 253 devices you can have connected to your home network. That is a lot!
 
@@ -60,7 +60,7 @@ ipconfig /all
 <div style=img><img src="/assets/ipconfig.png"></div>
 
 #### **MacOS**
-On MacOS things are a little bit more complicated, you can get the networking information from the terminal like windows but it requires a couple of commands to get everything. The most basic information can be returned with this which is assuming you are connected to a wiresless network.
+On MacOS things are a little bit more complicated, you can get the networking information from the terminal like windows but it requires a couple of commands to get everything. The most basic information can be returned with this which is assuming you are connected to a wireless network.
 {% highlight terminal %}
 ifconfig en0
 {% endhighlight %}

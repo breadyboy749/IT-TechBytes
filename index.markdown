@@ -7,7 +7,7 @@ menu: Home
 title: Welcome to IT-TechBytes
 ---
 
-#### In this blog you will find information on various topics aimed to help you get started in IT. I cover a wide variety of things from all corners of IT to help give you the knowledge to land your first IT job. Startnig with the basics and building off of that to more advanced topics. I also cover security, home networking, home lab, 3D printing, and really anything else I feel like writing about.
+#### In this blog you will find information on various topics aimed to help you get started in IT. I cover a wide variety of things from all corners of IT to help give you the knowledge to land your first IT job. Starting with the basics and building off of that to more advanced topics. I also cover security, home networking, home lab, 3D printing, and really anything else I feel like writing about.
 
 <br/>
 
