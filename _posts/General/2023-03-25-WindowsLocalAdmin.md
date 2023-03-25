@@ -6,7 +6,7 @@ permalink: /:categories/:title
 categories: Security
 series: Security
 excerpt: "Improve the security of your Windows install at home and reduce the potential risk of becoming victim to a cyber-attack"
-picture: /assets/Windows-defender.png/
+picture: /assets/Windows-def.png/
 ---
 
 By default, when you setup a Windows install on your personal computer, your account becomes a local administrator by default. This configuration is not very secure but does make it easier to use your computer right out of the box allowing you to install software and make any changes to your PC without needing to supply your credentials every time. This ease of use is not worth the additional security risk that this configuration creates.
