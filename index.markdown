@@ -44,6 +44,12 @@ Check out some of our recent articles, or go on over to the [Blog](http://it-tec
 
 }
 
+.card img {
+  /* Use object-fit to resize the image to fit its container */
+  object-fit: contain;
+  height: 200px;
+ 
+}
 
 
 /* On mouse-over, add a deeper shadow */
@@ -53,8 +59,8 @@ Check out some of our recent articles, or go on over to the [Blog](http://it-tec
 
 /* Add some padding inside the card container */
 .container {
-  padding: 10px 10px;
-
+  padding: .1px 10px;
+  flex: 1;
 }
 
 .blah {
@@ -65,7 +71,6 @@ Check out some of our recent articles, or go on over to the [Blog](http://it-tec
 }
 
 </style>
-
 
 
 
