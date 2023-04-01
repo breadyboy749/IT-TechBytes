@@ -21,11 +21,12 @@ Windows Servers can also be used to run 3rd party software. It will be very comm
 
 ### Windows Server Versions
 Windows Server, like Windows desktop has various versions however they do not follow the same naming convention. For Windows Server the convention is tied to the year that version was released. For example, these are the most common versions of Windows Server you will see in the wild:
-Windows Server 2008
-Windows Server 2012
-Windows Server 2012r2
-Windows Server 2016
-Windows Server 2019
-Windows Server 2022
+
+| Windows Server 2008
+| Windows Server 2012
+| Windows Server 2012r2
+| Windows Server 2016
+| Windows Server 2019
+| Windows Server 2022
 
 The Windows Server versions are setup so that each release is supported for a long time in order to ensure that IT admins are not having to constantly uplift their servers to the latest version. Eventually though, Microsoft does pull the plug on their older Windows Server versions and will no longer release security updates or regular patches. This is a big deal right now as Windows Server 2012 is reaching its end of life in October of 2023. Admins are having to scramble to make sure they can get all of their servers uplifted to a newer version of Windows Server to ensure they are not vulnerable to security flaws, and don't have to pay a large amount of money to Microsoft for extended support if they can't upgrade in time but need security updates.
