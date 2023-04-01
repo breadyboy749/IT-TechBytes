@@ -4,7 +4,7 @@ title:  "Understanding Windows Server"
 date:   2023-03-31
 categories: GettingStarted_WindowsServerAdmin
 permalink: /:categories/:title
-picture: /assets/WSlogo.png
+picture: /assets/WSlogo.png/
 excerpt: "Windows Server helps businesses run critical services to support their IT infrastructure and employees."
 ---
 
