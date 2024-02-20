@@ -8,7 +8,7 @@ title: Welcome to IT-TechBytes
 ---
 
 #### In this blog you will find information on various topics aimed to help you get started in IT. I cover a wide variety of things from all corners of IT to help give you the knowledge to land your first IT job. Starting with the basics and building off of that to more advanced topics. I also cover security, home networking, home lab, 3D printing, and really anything else I feel like writing about. 
-#### I am by no means an expert in any of these fields, but I want to share the knowledge and experience I have gathered taking on various roles and responsibilites in my career thus far.
+#### As time goes on you always learn, adapt, and discover new things and I want to share the knowledge and experience I have gathered taking on various roles and responsibilites in my career thus far.
 
 <br/>
 
