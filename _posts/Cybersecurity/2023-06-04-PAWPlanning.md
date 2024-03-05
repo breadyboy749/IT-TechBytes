@@ -2,7 +2,7 @@
 layout: post
 title:  "PAW Deployment Architecture and Planning Considerations"
 date:   2023-06-04
-categories: PAW
+series: PAW
 permalink: /:categories/:title
 picture: /assets/secure-workstation-deployment-flow.png
 excerpt: "Deploying PAW can be a real challenge there are lots of things to consider and risks that must be weighed to determine a solution that works well for your company."
