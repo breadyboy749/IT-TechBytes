@@ -28,39 +28,40 @@ Check out some of our recent articles, or go on over to the [Blog](http://it-tec
 
 
 .card {
-  /* Add shadows to create the "card" effect */
-  box-shadow: 0 4px 8px 0 rgba(245, 245, 245, 0.2);
-  background-color: rgb(64, 64, 64);
-  border-radius: 5px;
-  transition: 0.3s;
+  background-color: rgb(64, 64, 64); /* Use a light background color */
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
   display: flex;
-  flex-flow: row wrap;
-  flex-direction: column ;
+  flex-direction: row wrap;
+  flex-direction: column;
   text-align: left;
-  align-items: left;
-
-  flex: 31%;
   margin: 8px;
-
+  overflow: hidden;
+  flex: 31%;
+  height: 450px;
 }
 
 .card img {
-  /* Use object-fit to resize the image to fit its container */
-  object-fit: contain;
+  object-fit: cover;
   height: 200px;
- 
+  border-radius: 8px 8px 0 0; /* Rounded corners at the top */
 }
 
-
-/* On mouse-over, add a deeper shadow */
 .card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  transform: scale(1.05);
 }
+
 
 /* Add some padding inside the card container */
 .container {
   padding: .1px 10px;
   flex: 1;
+}
+
+.container h3 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .blah {
