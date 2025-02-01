@@ -8,7 +8,7 @@ title: Welcome to IT-TechBytes
 ---
 
 #### In this blog you will find information on various topics aimed to help you get started in IT. I cover a wide variety of things from all corners of IT to help give you the knowledge to land your first IT job. Starting with the basics and building off of that to more advanced topics. I also cover security, home networking, home lab, 3D printing, and really anything else I feel like writing about. 
-#### As time goes on you always learn, adapt, and discover new things and I want to share the knowledge and experience I have gathered taking on various roles and responsibilites in my career thus far.
+#### As time goes on you always learn, adapt, and discover new things and I want to share the knowledge and experience I have gathered taking on various roles and responsibilities in my career thus far.
 
 <br/>
 
@@ -16,88 +16,139 @@ Check out some of our recent articles, or go on over to the [Blog](http://it-tec
 
 
 # Recent Articles
+
 <style>
-@media screen and (min-width: 40em) {
-.body {
-  display: flex;
-  flex-wrap: wrap;
-  
+/* Set the background color */
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #ddd;
+  margin: 0;
+  padding: 0;
 }
 
+/* Proper 3-column grid layout */
+.articles-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Ensures 3 columns where possible */
+  gap: 20px; /* Adds spacing between items */
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
 }
 
+/* Responsive Design: 1-2 columns for smaller screens */
+@media (max-width: 1024px) {
+  .articles-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .articles-container {
+    grid-template-columns: 1fr;
+  }
+}
 
+/* Card Styling */
 .card {
-  background-color: rgb(64, 64, 64); /* Use a light background color */
-  border-radius: 8px;
-  transition: transform 0.3s ease-in-out;
+  background-color: rgb(50, 50, 50); /* Dark background for contrast */
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.3s ease-in-out, transform 0.2s ease-in-out;
+  text-decoration: none;
   display: flex;
-  flex-direction: row wrap;
   flex-direction: column;
-  text-align: left;
-  margin: 8px;
   overflow: hidden;
-  flex: 31%;
-  height: 450px;
+  border: 1px solid #444;
+  height: 100%; /* Ensures uniform height */
 }
 
+/* Image Styling */
 .card img {
+  width: 100%;
+  height: 180px;
   object-fit: cover;
-  height: 200px;
-  border-radius: 8px 8px 0 0; /* Rounded corners at the top */
+  display: block; /* Fixes any extra spacing */
 }
 
+/* Hover Effect */
 .card:hover {
-  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+  transform: translateY(-3px);
 }
 
-
-/* Add some padding inside the card container */
-.container {
-  padding: .1px 10px;
-  flex: 1;
+/* Card Content */
+.card-content {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex-grow: 1; /* Ensures content fills the card */
 }
 
-.container h3 {
+/* Title Styling */
+.card-content h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #fff;
+  margin: 0;
+  line-height: 1.3;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.blah {
-  padding: 10px;
-  object-fit: cover;
-  
-
+/* Article Intro */
+.card-content p {
+  font-size: 1rem;
+  color: #bbb;
+  margin: 0;
+  line-height: 1.6;
+  height: 48px; /* Keeps text aligned properly */
+  overflow: hidden;
 }
 
+/* Button Section (Fixes Read More button alignment) */
+.card-action {
+  padding: 16px;
+  text-align: center;
+  margin-top: auto; /* Pushes button to bottom */
+  width: 100%; /* Ensures it doesn’t cause overflow */
+  display: flex;
+  justify-content: center;
+}
+
+/* Read More Link (Fixed) */
+.card-action a {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #4da6ff;
+  display: inline-block; /* Ensure it doesn't break layout */
+  text-align: center;
+  padding: 10px 20px;
+  border-radius: 8px;
+  background: rgba(77, 166, 255, 0.1);
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Remove underline & fix hover */
+.card-action a:hover {
+  background: rgba(77, 166, 255, 0.2);
+  color: #66c2ff;
+}
 </style>
 
-
-
-<div class="body">
-  {% assign latest_post = site.posts[0] %}
-  <a href="{{site.baseurl}}{{latest_post.url}}" class="card">
-    <div class="blah"><img src= "{{latest_post.picture}}" style="width:100%"></div>
-    <div class="container">
-      <h3><b>{{latest_post.title}}</b></h3>
-      <p>{{latest_post.excerpt}}</p>
+<!-- Dynamic Jekyll Blog Post Cards -->
+<div class="articles-container">
+  {% for post in site.posts limit:3 %}
+  <a href="{{ site.baseurl }}{{ post.url }}" class="card">
+    <img src="{{ post.picture }}" alt="{{ post.title }}">
+    <div class="card-content">
+      <h3>{{ post.title }}</h3>
+      <p>{{ post.excerpt }}</p>
     </div>
   </a>
-  {% assign latest_post = site.posts[1] %}
-  <a href="{{site.baseurl}}{{latest_post.url}}" class="card">
-    <div class="blah"><img src="{{latest_post.picture}}" style="width:100%"></div>
-    <div class="container">
-      <h3><b>{{latest_post.title}}</b></h3>
-      <p>{{latest_post.excerpt}}</p>
-    </div>
-  </a>
-  {% assign latest_post = site.posts[2] %}
-  <a href="{{site.baseurl}}{{latest_post.url}}" class="card">
-    <div class="blah"><img src="{{latest_post.picture}}" style="width:100%"></div>
-    <div class="container">
-      <h3><b>{{latest_post.title}}</b></h3>
-      <p>{{latest_post.excerpt}}</p>
-    </div>
-  </a>
+  {% endfor %}
 </div>
+
+
