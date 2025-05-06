@@ -48,11 +48,26 @@ With this basic design we figured this should work well and took quite a few ite
 ![alt text](<../../assets/vape_lock_box/2025-04-30 20_33_34-vape tray - Part 1 - BambuStudio.png>)
 
 
-The next problem that I ran into was the doors that I wanted to use. I originally wanted these folding doors that would dramatically unfold as the vape was being raised and would just be pushed up by the vape itself being raised. These would have small rubber bands connected to them to have some tension so that they closed when the vape was lowered, but because we were operating at the limits of the motors power, not matter what I did I could not get enough power from the motor to overcome the weight and friction that these doors added to everything. I tried a handful of things but could not get them to work in the real world.
+The next problem that I ran into was the doors that I wanted to use. I originally wanted these folding doors that would dramatically unfold as the vape was being raised. These would have small rubber bands connected to them to have some tension so that they closed when the vape was lowered, but because we were operating at the limits of the motors power no matter what I did I could not get enough torque from the motor to overcome the weight and friction that these doors added to everything. I tried a handful of things but could not get them to work in the real world.
 
 ![alt text](<../../assets/vape_lock_box/2025-04-30 20_37_35-vape_box _ Doors - Brave.png>)
 
 ![alt text](<../../assets/vape_lock_box/2025-04-30 20_37_52-vape_box _ assembled vape box - Brave.png>)
+
+What I ended up settling on was the port hole method. This was not my preferred option but it was one that was simple and worked, and at this point that is what I needed. I was losing steam on this project and just wantd to get it done and working so I could show it off.
+
+![alt text](../../assets/vape_lock_box/SCR-20250505-sswi.png)
+
+Throughout this process there was a lot of iterations that had to be made to see how things were going to work in the real world. There was also a lack of knowledge that I had for making a complext assembly in Onshape that was hurting me as well. I thought that maybe I could get away with printing a couple of test pieces and then adjusting them to be 'close enough'. That was not the case. I really needed to figure out how to assemble everything the right way in Onshape...
+
+
+After quite a few hours watching some videos and trying things out with the model I was able to get everything assembled in Onshape like it would be in the real world and I was finally able to see how everything would interact without needing to print everything. This was super helpful because I was able to fix a lot of would be problems before I did the printing now.
+
+With the design issues figured out this is the final design that was settled on from a couple different viewpoints.
+
+![alt text](../../assets/vape_lock_box/SCR-20250505-svqx.png)
+
+![alt text](../../assets/vape_lock_box/SCR-20250505-swzf.png)
 
 
 ## How do we accept payments and notify the Pi to execute the presentation ensemble?
@@ -166,3 +181,5 @@ This is the main function that is called which is what runs everything. You can 
 Lastly we have the code that runs the stepper motor. This is called from the call_ha script that contains all the configuration that is changing the lights and whatnot. This made the most sense since I wanted the code for the stepper to run at the same time as the lights changing and wanted to integrate some sleeps so that there was a bit of delay between things happening. This code was interesting to write as I have never dealt with stepper motors and learned some interesting things. This code I grabbed a template that people had since for most stepper configurations it follows the same pattern. You define an array and then tell the motor to operate through that array at a specific interval. This is what 'steps' the motor, you then define the delay between moving the values and then depending on if it loops through the array forwards or backwards will determine the direction that the stepper moves. With all that combined you just need to determine the right amount of steps, for the motor I used it was a full step sequence and then determine the right delay. With it dialed in correctly you should have a steady set of movement for the stepper motor. With that figured out you then just define how many times you want it to loop through that array, the delay it should use, and what direction it should go and boom, off to the races with the motor moving.
 
 ![alt text](<../../assets/vape_lock_box/2025-04-30 20_05_00-simple_stepper_rotation.py - vape_sucky - Visual Studio Code.png>)
+
+# Man Overboard
