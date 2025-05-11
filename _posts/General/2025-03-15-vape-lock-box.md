@@ -9,6 +9,7 @@ excerpt: "Friends vaping too much? Make 'em pay!"
 picture: /assets/vector/placeholder.png
 ---
 
+
 A goofy fun project to explore some new areas like microcontrollers, servos, and stepper motor programming with a Raspberry Pi Zero and Pico with an incredibly overcomplicated mechanism and equally over complicated code running it all.
 
 # The Problem
@@ -145,6 +146,19 @@ The problem that I had with the motors I got from Amazon was that they were serv
 
 Thankfully I was able to much more easily use the stepper motors and had full control over just how much distance they were going to cover so I could easily and repeatably use them to move the vape up and down the track in the box. These worked perfectly, the only problem was that the motor is a bit under powered. It caused me to have to redesign a bit of the box because of this and there are ways to [overvolt](https://everythingsmarthome.co.uk/converting-the-28byj-48-stepper-motor-for-more-torque/) these steppers, but would then require that I have a 12v PSU connected and really I wanted to keep this as simple as possible and wanted to run everything off a small battery backup.
 
+## The Raspberry Pi Setup
+This is honestly the most straight foward part of this entire build. When I went to Microcenter I picked up a Raspberry Pi Zero 2 W and a Raspberry Pi Pico 2 as I wanted this to be a super low power build. What I quickly learned however was that the Pi Pico runs micropython, and that only has a very limited subset of python libraries available and a lot of the ones that I needed to run all the python code are not compatible. Now I could have ran the base code on my server and then just made a call to execute the python script that would just make the motor go, and this was what I was already doing when I was testing, but I wanted this to be a fully self contained system and I didn't want to have to have something running on a server somewhere else. Also I am pretty sure the Pico 2's power output would not have been enough for the stepper motor, and I did not get the soldered header Pico, so that would have been a lot of extra work as well.
+
+With it settled that I was going to use the Zero 2 W, things were a lot easier, the model I got had soldered headers and the Zero has an additonal power input incase you need it (I thankfully did not). The Zero 2 W can also run full Raspberry Pi OS so there was no need to adjust any of the code I had written and it allowed me to go a bit overboard which you'll see at the end of this article.
+The setup like I said was really straight forward, all you have to do is follow the normal steps to get Raspberry Pi OS installed on an SD card and then pop it into the Pi. From there I just had to take the stepper motor and plug it into the controller that it came with and then from the controller hook up some dupont wires to each various input and then wire that to the Pi. For the steppers I was using, there was 5v power, ground, and then 4 control inputs. Those 3 control inputs just need to be plugged into any 4 GPIO headers on your Pi and just make sure to note which ones you used because you will need them when you write you code. 
+
+One thing to note is that the order of them does matter, so when you plug them in, it is best to match the input on the stepper control board to the lowest numbered GPIO that you select, and then for the next control input, increment however, but make sure it is the next successive control input and that the GPIO header is higher than the first. The last one just make sure it is the highest GPIO pin of the 3 others you already picked. This will just save some headache when you go to code things and wonder why things are not working.
+
+Here is an example of what I mean, and this is how I setup the GPIO connections on my Pi.
+![alt text](../../assets/vape_lock_box/SCR-20250510-tped.png)
+
+From what I was finding online, and the trouble this little nuiance caused me, it seems that not a lot of people/guides were mentioning this part which I was surprised by. It felt like it was one of those instinctual knowledge items where everyone already knows this and assumes that everyone else knows it as well, or that it is so baked into your mind you don't even think about mentioning it.
+
 ## The Python Code
 Lets take a look at the python code that is going to be running all of this. I wanted to use this project to brush up on a handful of skills and practice some more with python and writing some more complex and multi-script implementations. There were a handful of requirements that I had for the code:
 
@@ -181,5 +195,25 @@ This is the main function that is called which is what runs everything. You can 
 Lastly we have the code that runs the stepper motor. This is called from the call_ha script that contains all the configuration that is changing the lights and whatnot. This made the most sense since I wanted the code for the stepper to run at the same time as the lights changing and wanted to integrate some sleeps so that there was a bit of delay between things happening. This code was interesting to write as I have never dealt with stepper motors and learned some interesting things. This code I grabbed a template that people had since for most stepper configurations it follows the same pattern. You define an array and then tell the motor to operate through that array at a specific interval. This is what 'steps' the motor, you then define the delay between moving the values and then depending on if it loops through the array forwards or backwards will determine the direction that the stepper moves. With all that combined you just need to determine the right amount of steps, for the motor I used it was a full step sequence and then determine the right delay. With it dialed in correctly you should have a steady set of movement for the stepper motor. With that figured out you then just define how many times you want it to loop through that array, the delay it should use, and what direction it should go and boom, off to the races with the motor moving.
 
 ![alt text](<../../assets/vape_lock_box/2025-04-30 20_05_00-simple_stepper_rotation.py - vape_sucky - Visual Studio Code.png>)
+
+# The Finished Product
+Here are some pics of the finished product and some of the inbetween.
+
+
+This is the graveyard of test parts that were printed to do some analysis in the real world on whether things were going to work or fit. Not too bad for all the various things that needed to work together for this project and have pretty tight tolerances. The part that ended up being the most painful was getting the diameter of the hole the right size for filament to go through for the doors, and in the end that didn't even really matter that much because the door is stationary, oh well.
+
+![alt text](../../assets/vape_lock_box/IMG_1798.png)
+
+Here is some of the assembly and this was originally with the folding doors, those were quickly replaced though after I determined it was not going to work.
+
+![alt text](../../assets/vape_lock_box/IMG_1797.png)
+
+![alt text](../../assets/vape_lock_box/IMG_1796.png)
+
+Here is that new door. Not as fun, but quite functional. Also the parts that help cover the hole in the top because of the angle it has to be to face the user and the piece to allow it to mount to the wall.
+
+![alt text](../../assets/vape_lock_box/IMG_1795.png)
+
+
 
 # Man Overboard
